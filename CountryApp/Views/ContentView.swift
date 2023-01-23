@@ -15,14 +15,14 @@ struct ContentView: View {
     
         VStack {
             VStack{
-                Text("HI")
+               // Text("HI")
                 //r.countries[0].geography?.coastline.text
                 //fetch.response.geography?.coastline.text
-                Text(fetch.response.geography?.coastline.text ?? "No work")
+                //Text(fetch.response.introduction?.background?.text ?? "No work")
                 
             }
             .task {
-                await fetch.getData()
+                await fetch.getLocalData()
                 
         }
             

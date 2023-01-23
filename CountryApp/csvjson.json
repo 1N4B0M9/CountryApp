@@ -67,7 +67,7 @@
   },
   {
     "Code": "bf",
-    "Name": "Bahamas, The",
+    "Name": "The Bahamas",
     "Category": "Countries",
     "Region": "Central America and Caribbean"
   },
@@ -235,13 +235,13 @@
   },
   {
     "Code": "cg",
-    "Name": "Congo, Democratic Republic of the",
+    "Name": "Democratic Republic of the Congo",
     "Category": "Countries",
     "Region": "Africa"
   },
   {
     "Code": "cf",
-    "Name": "Congo, Republic of the",
+    "Name": "Republic of the Congo",
     "Category": "Countries",
     "Region": "Africa"
   },
@@ -373,7 +373,7 @@
   },
   {
     "Code": "ga",
-    "Name": "Gambia, The",
+    "Name": "The Gambia",
     "Category": "Countries",
     "Region": "Africa"
   },
@@ -535,13 +535,13 @@
   },
   {
     "Code": "kn",
-    "Name": "Korea, North",
+    "Name": "North Korea",
     "Category": "Countries",
     "Region": "East & Southeast Asia"
   },
   {
     "Code": "ks",
-    "Name": "Korea, South",
+    "Name": "South Korea",
     "Category": "Countries",
     "Region": "East & Southeast Asia"
   },
@@ -685,7 +685,7 @@
   },
   {
     "Code": "fm",
-    "Name": "Micronesia, Federated States of",
+    "Name": "Federated States of Micronesia",
     "Category": "Countries",
     "Region": "Australia-Oceania"
   },

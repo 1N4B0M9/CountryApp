@@ -12,27 +12,27 @@
 //
 //   let welcome = try? newJSONDecoder().decode(Welcome.self, from: jsonData)
 
-import Foundation
-
 // This file was generated from JSON Schema using quicktype, do not modify it directly.
 // To parse the JSON, add this file to your project and do:
 //
 //   let welcome = try? JSONDecoder().decode(Welcome.self, from: jsonData)
 
+import Foundation
+
 // MARK: - Welcome
 struct Welcome: Codable {
-    let introduction: Introduction?
-    let geography: Geography?
-    let peopleAndSociety: PeopleAndSociety?
-    let environment: Environment?
-    let government: Government?
-    let economy: Economy?
-    let energy: Energy?
-    let communications: Communications?
-    let transportation: Transportation?
-    let militaryAndSecurity: MilitaryAndSecurity?
-    let terrorism: Terrorism?
-    let transnationalIssues: TransnationalIssues?
+    var introduction: Introduction?
+    var geography: Geography?
+    var peopleAndSociety: PeopleAndSociety?
+    var environment: Environment?
+    var government: Government?
+    var economy: Economy?
+    var energy: Energy?
+    var communications: Communications?
+    var transportation: Transportation?
+    var militaryAndSecurity: MilitaryAndSecurity?
+    var terrorism: Terrorism?
+    var transnationalIssues: TransnationalIssues?
 
     enum CodingKeys: String, CodingKey {
         case introduction = "Introduction"
@@ -52,11 +52,11 @@ struct Welcome: Codable {
 
 // MARK: - Communications
 struct Communications: Codable {
-    let telephonesFixedLines, telephonesMobileCellular: Telephones
-    let telecommunicationSystems: TelecommunicationSystems
-    let broadcastMedia, internetCountryCode: BroadcastMedia
-    let internetUsers: InternetUsers
-    let broadbandFixedSubscriptions: BroadbandFixedSubscriptions
+    var telephonesFixedLines, telephonesMobileCellular: Telephones?
+    var telecommunicationSystems: TelecommunicationSystems?
+    var broadcastMedia, internetCountryCode: BroadcastMedia?
+    var internetUsers: InternetUsers?
+    var broadbandFixedSubscriptions: BroadbandFixedSubscriptions?
 
     enum CodingKeys: String, CodingKey {
         case telephonesFixedLines = "Telephones - fixed lines"
@@ -71,7 +71,7 @@ struct Communications: Codable {
 
 // MARK: - BroadbandFixedSubscriptions
 struct BroadbandFixedSubscriptions: Codable {
-    let total, subscriptionsPer100Inhabitants: BroadcastMedia
+    var total, subscriptionsPer100Inhabitants: BroadcastMedia?
 
     enum CodingKeys: String, CodingKey {
         case total
@@ -81,12 +81,12 @@ struct BroadbandFixedSubscriptions: Codable {
 
 // MARK: - BroadcastMedia
 struct BroadcastMedia: Codable {
-    let text: String
+    var text: String?
 }
 
 // MARK: - InternetUsers
 struct InternetUsers: Codable {
-    let total, percentOfPopulation: BroadcastMedia
+    var total, percentOfPopulation: BroadcastMedia?
 
     enum CodingKeys: String, CodingKey {
         case total
@@ -96,8 +96,8 @@ struct InternetUsers: Codable {
 
 // MARK: - TelecommunicationSystems
 struct TelecommunicationSystems: Codable {
-    let generalAssessment, domestic, international: BroadcastMedia
-    let note: String
+    var generalAssessment, domestic, international: BroadcastMedia?
+    var note: String?
 
     enum CodingKeys: String, CodingKey {
         case generalAssessment = "general assessment"
@@ -107,7 +107,7 @@ struct TelecommunicationSystems: Codable {
 
 // MARK: - Telephones
 struct Telephones: Codable {
-    let totalSubscriptions, subscriptionsPer100Inhabitants: BroadcastMedia
+    var totalSubscriptions, subscriptionsPer100Inhabitants: BroadcastMedia?
 
     enum CodingKeys: String, CodingKey {
         case totalSubscriptions = "total subscriptions"
@@ -117,34 +117,34 @@ struct Telephones: Codable {
 
 // MARK: - Economy
 struct Economy: Codable {
-    let economicOverview: BroadcastMedia
-    let realGDPPurchasingPowerParity: RealGDPPurchasingPowerParity
-    let realGDPGrowthRate: RealGDPGrowthRate
-    let realGDPPerCapita: RealGDPPerCapita
-    let gdpOfficialExchangeRate: BroadcastMedia
-    let inflationRateConsumerPrices: InflationRateConsumerPrices
-    let creditRatings: CreditRatings
-    let gdpCompositionBySectorOfOrigin: GdpCompositionBySectorOfOrigin
-    let gdpCompositionByEndUse: GDPCompositionByEndUse
-    let agriculturalProducts, industries, industrialProductionGrowthRate, laborForce: BroadcastMedia
-    let laborForceByOccupation: GdpCompositionBySectorOfOrigin
-    let unemploymentRate: UnemploymentRate
-    let youthUnemploymentRateAges1524: YouthUnemploymentRateAges1524
-    let populationBelowPovertyLine: BroadcastMedia
-    let giniIndexCoefficientDistributionOfFamilyIncome: GiniIndexCoefficientDistributionOfFamilyIncome
-    let householdIncomeOrConsumptionByPercentageShare: HouseholdIncomeOrConsumptionByPercentageShare
-    let budget: Budget
-    let budgetSurplusOrDeficit: BroadcastMedia
-    let publicDebt: PublicDebt
-    let taxesAndOtherRevenues, fiscalYear: BroadcastMedia
-    let currentAccountBalance: CurrentAccountBalance
-    let exports: Exports
-    let exportsPartners, exportsCommodities: BroadcastMedia
-    let imports: Imports
-    let importsPartners, importsCommodities: BroadcastMedia
-    let reservesOfForeignExchangeAndGold: ReservesOfForeignExchangeAndGold
-    let debtExternal: DebtExternal
-    let exchangeRates: ExchangeRates
+    var economicOverview: BroadcastMedia?
+    var realGDPPurchasingPowerParity: RealGDPPurchasingPowerParity?
+    var realGDPGrowthRate: RealGDPGrowthRate?
+    var realGDPPerCapita: RealGDPPerCapita?
+    var gdpOfficialExchangeRate: BroadcastMedia?
+    var inflationRateConsumerPrices: InflationRateConsumerPrices?
+    var creditRatings: CreditRatings?
+    var gdpCompositionBySectorOfOrigin: GdpCompositionBySectorOfOrigin?
+    var gdpCompositionByEndUse: GDPCompositionByEndUse?
+    var agriculturalProducts, industries, industrialProductionGrowthRate, laborForce: BroadcastMedia?
+    var laborForceByOccupation: GdpCompositionBySectorOfOrigin?
+    var unemploymentRate: UnemploymentRate?
+    var youthUnemploymentRateAges1524: YouthUnemploymentRateAges1524?
+    var populationBelowPovertyLine: BroadcastMedia?
+    var giniIndexCoefficientDistributionOfFamilyIncome: GiniIndexCoefficientDistributionOfFamilyIncome?
+    var householdIncomeOrConsumptionByPercentageShare: HouseholdIncomeOrConsumptionByPercentageShare?
+    var budget: Budget?
+    var budgetSurplusOrDeficit: BroadcastMedia?
+    var publicDebt: PublicDebt?
+    var taxesAndOtherRevenues, fiscalYear: BroadcastMedia?
+    var currentAccountBalance: CurrentAccountBalance?
+    var exports: Exports?
+    var exportsPartners, exportsCommodities: BroadcastMedia?
+    var imports: Imports?
+    var importsPartners, importsCommodities: BroadcastMedia?
+    var reservesOfForeignExchangeAndGold: ReservesOfForeignExchangeAndGold?
+    var debtExternal: DebtExternal?
+    var exchangeRates: ExchangeRates?
 
     enum CodingKeys: String, CodingKey {
         case economicOverview = "Economic overview"
@@ -186,13 +186,13 @@ struct Economy: Codable {
 
 // MARK: - Budget
 struct Budget: Codable {
-    let revenues, expenditures: BroadcastMedia
+    var revenues, expenditures: BroadcastMedia?
 }
 
 // MARK: - CreditRatings
 struct CreditRatings: Codable {
-    let fitchRating, moodySRating, standardPoorsRating: BroadcastMedia
-    let note: String
+    var fitchRating, moodySRating, standardPoorsRating: BroadcastMedia?
+    var note: String?
 
     enum CodingKeys: String, CodingKey {
         case fitchRating = "Fitch rating"
@@ -204,7 +204,7 @@ struct CreditRatings: Codable {
 
 // MARK: - CurrentAccountBalance
 struct CurrentAccountBalance: Codable {
-    let currentAccountBalance2021, currentAccountBalance2020, currentAccountBalance2019: BroadcastMedia
+    var currentAccountBalance2021, currentAccountBalance2020, currentAccountBalance2019: BroadcastMedia?
 
     enum CodingKeys: String, CodingKey {
         case currentAccountBalance2021 = "Current account balance 2021"
@@ -215,7 +215,7 @@ struct CurrentAccountBalance: Codable {
 
 // MARK: - DebtExternal
 struct DebtExternal: Codable {
-    let debtExternal2019, debtExternal2018: BroadcastMedia
+    var debtExternal2019, debtExternal2018: BroadcastMedia?
 
     enum CodingKeys: String, CodingKey {
         case debtExternal2019 = "Debt - external 2019"
@@ -225,8 +225,8 @@ struct DebtExternal: Codable {
 
 // MARK: - ExchangeRates
 struct ExchangeRates: Codable {
-    let currency, exchangeRates2021, exchangeRates2020, exchangeRates2019: BroadcastMedia
-    let exchangeRates2018, exchangeRates2017: BroadcastMedia
+    var currency, exchangeRates2021, exchangeRates2020, exchangeRates2019: BroadcastMedia?
+    var exchangeRates2018, exchangeRates2017: BroadcastMedia?
 
     enum CodingKeys: String, CodingKey {
         case currency = "Currency"
@@ -240,7 +240,7 @@ struct ExchangeRates: Codable {
 
 // MARK: - Exports
 struct Exports: Codable {
-    let exports2021, exports2020, exports2019: BroadcastMedia
+    var exports2021, exports2020, exports2019: BroadcastMedia?
 
     enum CodingKeys: String, CodingKey {
         case exports2021 = "Exports 2021"
@@ -251,8 +251,8 @@ struct Exports: Codable {
 
 // MARK: - GDPCompositionByEndUse
 struct GDPCompositionByEndUse: Codable {
-    let householdConsumption, governmentConsumption, investmentInFixedCapital, investmentInInventories: BroadcastMedia
-    let exportsOfGoodsAndServices, importsOfGoodsAndServices: BroadcastMedia
+    var householdConsumption, governmentConsumption, investmentInFixedCapital, investmentInInventories: BroadcastMedia?
+    var exportsOfGoodsAndServices, importsOfGoodsAndServices: BroadcastMedia?
 
     enum CodingKeys: String, CodingKey {
         case householdConsumption = "household consumption"
@@ -266,12 +266,12 @@ struct GDPCompositionByEndUse: Codable {
 
 // MARK: - GdpCompositionBySectorOfOrigin
 struct GdpCompositionBySectorOfOrigin: Codable {
-    let agriculture, industry, services: BroadcastMedia
+    var agriculture, industry, services: BroadcastMedia?
 }
 
 // MARK: - GiniIndexCoefficientDistributionOfFamilyIncome
 struct GiniIndexCoefficientDistributionOfFamilyIncome: Codable {
-    let giniIndexCoefficientDistributionOfFamilyIncome2018: BroadcastMedia
+    var giniIndexCoefficientDistributionOfFamilyIncome2018: BroadcastMedia?
 
     enum CodingKeys: String, CodingKey {
         case giniIndexCoefficientDistributionOfFamilyIncome2018 = "Gini Index coefficient - distribution of family income 2018"
@@ -280,7 +280,7 @@ struct GiniIndexCoefficientDistributionOfFamilyIncome: Codable {
 
 // MARK: - HouseholdIncomeOrConsumptionByPercentageShare
 struct HouseholdIncomeOrConsumptionByPercentageShare: Codable {
-    let lowest10, highest10: BroadcastMedia
+    var lowest10, highest10: BroadcastMedia?
 
     enum CodingKeys: String, CodingKey {
         case lowest10 = "lowest 10%"
@@ -290,7 +290,7 @@ struct HouseholdIncomeOrConsumptionByPercentageShare: Codable {
 
 // MARK: - Imports
 struct Imports: Codable {
-    let imports2021, imports2020, imports2019: BroadcastMedia
+    var imports2021, imports2020, imports2019: BroadcastMedia?
 
     enum CodingKeys: String, CodingKey {
         case imports2021 = "Imports 2021"
@@ -301,7 +301,7 @@ struct Imports: Codable {
 
 // MARK: - InflationRateConsumerPrices
 struct InflationRateConsumerPrices: Codable {
-    let inflationRateConsumerPrices2021, inflationRateConsumerPrices2020, inflationRateConsumerPrices2019: BroadcastMedia
+    var inflationRateConsumerPrices2021, inflationRateConsumerPrices2020, inflationRateConsumerPrices2019: BroadcastMedia?
 
     enum CodingKeys: String, CodingKey {
         case inflationRateConsumerPrices2021 = "Inflation rate (consumer prices) 2021"
@@ -312,8 +312,8 @@ struct InflationRateConsumerPrices: Codable {
 
 // MARK: - PublicDebt
 struct PublicDebt: Codable {
-    let publicDebt2017, publicDebt2016: BroadcastMedia
-    let note: String
+    var publicDebt2017, publicDebt2016: BroadcastMedia?
+    var note: String?
 
     enum CodingKeys: String, CodingKey {
         case publicDebt2017 = "Public debt 2017"
@@ -324,7 +324,7 @@ struct PublicDebt: Codable {
 
 // MARK: - RealGDPGrowthRate
 struct RealGDPGrowthRate: Codable {
-    let realGDPGrowthRate2021, realGDPGrowthRate2020, realGDPGrowthRate2019: BroadcastMedia
+    var realGDPGrowthRate2021, realGDPGrowthRate2020, realGDPGrowthRate2019: BroadcastMedia?
 
     enum CodingKeys: String, CodingKey {
         case realGDPGrowthRate2021 = "Real GDP growth rate 2021"
@@ -335,8 +335,8 @@ struct RealGDPGrowthRate: Codable {
 
 // MARK: - RealGDPPerCapita
 struct RealGDPPerCapita: Codable {
-    let realGDPPerCapita2021, realGDPPerCapita2020, realGDPPerCapita2019: BroadcastMedia
-    let note: String
+    var realGDPPerCapita2021, realGDPPerCapita2020, realGDPPerCapita2019: BroadcastMedia?
+    var note: String?
 
     enum CodingKeys: String, CodingKey {
         case realGDPPerCapita2021 = "Real GDP per capita 2021"
@@ -348,8 +348,8 @@ struct RealGDPPerCapita: Codable {
 
 // MARK: - RealGDPPurchasingPowerParity
 struct RealGDPPurchasingPowerParity: Codable {
-    let realGDPPurchasingPowerParity2021, realGDPPurchasingPowerParity2020, realGDPPurchasingPowerParity2019: BroadcastMedia
-    let note: String
+    var realGDPPurchasingPowerParity2021, realGDPPurchasingPowerParity2020, realGDPPurchasingPowerParity2019: BroadcastMedia?
+    var note: String?
 
     enum CodingKeys: String, CodingKey {
         case realGDPPurchasingPowerParity2021 = "Real GDP (purchasing power parity) 2021"
@@ -361,7 +361,7 @@ struct RealGDPPurchasingPowerParity: Codable {
 
 // MARK: - ReservesOfForeignExchangeAndGold
 struct ReservesOfForeignExchangeAndGold: Codable {
-    let reservesOfForeignExchangeAndGold31December2021, reservesOfForeignExchangeAndGold31December2020, reservesOfForeignExchangeAndGold31December2019: BroadcastMedia
+    var reservesOfForeignExchangeAndGold31December2021, reservesOfForeignExchangeAndGold31December2020, reservesOfForeignExchangeAndGold31December2019: BroadcastMedia?
 
     enum CodingKeys: String, CodingKey {
         case reservesOfForeignExchangeAndGold31December2021 = "Reserves of foreign exchange and gold 31 December 2021"
@@ -372,7 +372,7 @@ struct ReservesOfForeignExchangeAndGold: Codable {
 
 // MARK: - UnemploymentRate
 struct UnemploymentRate: Codable {
-    let unemploymentRate2021, unemploymentRate2020, unemploymentRate2019: BroadcastMedia
+    var unemploymentRate2021, unemploymentRate2020, unemploymentRate2019: BroadcastMedia?
 
     enum CodingKeys: String, CodingKey {
         case unemploymentRate2021 = "Unemployment rate 2021"
@@ -383,20 +383,20 @@ struct UnemploymentRate: Codable {
 
 // MARK: - YouthUnemploymentRateAges1524
 struct YouthUnemploymentRateAges1524: Codable {
-    let total, male, female: BroadcastMedia
+    var total, male, female: BroadcastMedia?
 }
 
 // MARK: - Energy
 struct Energy: Codable {
-    let electricityAccess: ElectricityAccess
-    let electricity: Electricity
-    let electricityGenerationSources: ElectricityGenerationSources
-    let coal: Coal
-    let petroleum: Petroleum
-    let refinedPetroleumProductsProduction, refinedPetroleumProductsExports, refinedPetroleumProductsImports: BroadcastMedia
-    let naturalGas: Coal
-    let carbonDioxideEmissions: CarbonDioxideEmissions
-    let energyConsumptionPerCapita: EnergyConsumptionPerCapita
+    var electricityAccess: ElectricityAccess?
+    var electricity: Electricity?
+    var electricityGenerationSources: ElectricityGenerationSources?
+    var coal: Coal?
+    var petroleum: Petroleum?
+    var refinedPetroleumProductsProduction, refinedPetroleumProductsExports, refinedPetroleumProductsImports: BroadcastMedia?
+    var naturalGas: Coal?
+    var carbonDioxideEmissions: CarbonDioxideEmissions?
+    var energyConsumptionPerCapita: EnergyConsumptionPerCapita?
 
     enum CodingKeys: String, CodingKey {
         case electricityAccess = "Electricity access"
@@ -415,7 +415,7 @@ struct Energy: Codable {
 
 // MARK: - CarbonDioxideEmissions
 struct CarbonDioxideEmissions: Codable {
-    let totalEmissions, fromCoalAndMetallurgicalCoke, fromPetroleumAndOtherLiquids, fromConsumedNaturalGas: BroadcastMedia
+    var totalEmissions, fromCoalAndMetallurgicalCoke, fromPetroleumAndOtherLiquids, fromConsumedNaturalGas: BroadcastMedia?
 
     enum CodingKeys: String, CodingKey {
         case totalEmissions = "total emissions"
@@ -427,8 +427,8 @@ struct CarbonDioxideEmissions: Codable {
 
 // MARK: - Coal
 struct Coal: Codable {
-    let production, consumption, exports, imports: BroadcastMedia
-    let provenReserves: BroadcastMedia
+    var production, consumption, exports, imports: BroadcastMedia?
+    var provenReserves: BroadcastMedia?
 
     enum CodingKeys: String, CodingKey {
         case production, consumption, exports, imports
@@ -438,8 +438,8 @@ struct Coal: Codable {
 
 // MARK: - Electricity
 struct Electricity: Codable {
-    let installedGeneratingCapacity, consumption, exports, imports: BroadcastMedia
-    let transmissionDistributionLosses: BroadcastMedia
+    var installedGeneratingCapacity, consumption, exports, imports: BroadcastMedia?
+    var transmissionDistributionLosses: BroadcastMedia?
 
     enum CodingKeys: String, CodingKey {
         case installedGeneratingCapacity = "installed generating capacity"
@@ -450,7 +450,7 @@ struct Electricity: Codable {
 
 // MARK: - ElectricityAccess
 struct ElectricityAccess: Codable {
-    let electrificationTotalPopulation: BroadcastMedia
+    var electrificationTotalPopulation: BroadcastMedia?
 
     enum CodingKeys: String, CodingKey {
         case electrificationTotalPopulation = "electrification - total population"
@@ -459,8 +459,8 @@ struct ElectricityAccess: Codable {
 
 // MARK: - ElectricityGenerationSources
 struct ElectricityGenerationSources: Codable {
-    let fossilFuels, nuclear, solar, wind: BroadcastMedia
-    let hydroelectricity, tideAndWave, geothermal, biomassAndWaste: BroadcastMedia
+    var fossilFuels, nuclear, solar, wind: BroadcastMedia?
+    var hydroelectricity, tideAndWave, geothermal, biomassAndWaste: BroadcastMedia?
 
     enum CodingKeys: String, CodingKey {
         case fossilFuels = "fossil fuels"
@@ -473,7 +473,7 @@ struct ElectricityGenerationSources: Codable {
 
 // MARK: - EnergyConsumptionPerCapita
 struct EnergyConsumptionPerCapita: Codable {
-    let totalEnergyConsumptionPerCapita2019: BroadcastMedia
+    var totalEnergyConsumptionPerCapita2019: BroadcastMedia?
 
     enum CodingKeys: String, CodingKey {
         case totalEnergyConsumptionPerCapita2019 = "Total energy consumption per capita 2019"
@@ -482,8 +482,8 @@ struct EnergyConsumptionPerCapita: Codable {
 
 // MARK: - Petroleum
 struct Petroleum: Codable {
-    let totalPetroleumProduction, refinedPetroleumConsumption, crudeOilAndLeaseCondensateExports, crudeOilAndLeaseCondensateImports: BroadcastMedia
-    let crudeOilEstimatedReserves: BroadcastMedia
+    var totalPetroleumProduction, refinedPetroleumConsumption, crudeOilAndLeaseCondensateExports, crudeOilAndLeaseCondensateImports: BroadcastMedia?
+    var crudeOilEstimatedReserves: BroadcastMedia?
 
     enum CodingKeys: String, CodingKey {
         case totalPetroleumProduction = "total petroleum production"
@@ -496,19 +496,19 @@ struct Petroleum: Codable {
 
 // MARK: - Environment
 struct Environment: Codable {
-    let environmentCurrentIssues: BroadcastMedia
-    let environmentInternationalAgreements: EnvironmentInternationalAgreements
-    let airPollutants: AirPollutants
-    let climate: BroadcastMedia
-    let landUse: LandUse
-    let urbanization: Urbanization
-    let revenueFromForestResources: RevenueFromForestResources
-    let revenueFromCoal: RevenueFromCoal
-    let wasteAndRecycling: WasteAndRecycling
-    let majorLakesAreaSqKM: MajorLakesAreaSqKM
-    let majorRiversByLengthInKM, majorWatershedsAreaSqKM: BroadcastMedia
-    let totalWaterWithdrawal: TotalWaterWithdrawal
-    let totalRenewableWaterResources: BroadcastMedia
+    var environmentCurrentIssues: BroadcastMedia?
+    var environmentInternationalAgreements: EnvironmentInternationalAgreements?
+    var airPollutants: AirPollutants?
+    var climate: BroadcastMedia?
+    var landUse: LandUse?
+    var urbanization: Urbanization?
+    var revenueFromForestResources: RevenueFromForestResources?
+    var revenueFromCoal: RevenueFromCoal?
+    var wasteAndRecycling: WasteAndRecycling?
+    var majorLakesAreaSqKM: MajorLakesAreaSqKM?
+    var majorRiversByLengthInKM, majorWatershedsAreaSqKM: BroadcastMedia?
+    var totalWaterWithdrawal: TotalWaterWithdrawal?
+    var totalRenewableWaterResources: BroadcastMedia?
 
     enum CodingKeys: String, CodingKey {
         case environmentCurrentIssues = "Environment - current issues"
@@ -530,7 +530,7 @@ struct Environment: Codable {
 
 // MARK: - AirPollutants
 struct AirPollutants: Codable {
-    let particulateMatterEmissions, carbonDioxideEmissions, methaneEmissions: BroadcastMedia
+    var particulateMatterEmissions, carbonDioxideEmissions, methaneEmissions: BroadcastMedia?
 
     enum CodingKeys: String, CodingKey {
         case particulateMatterEmissions = "particulate matter emissions"
@@ -541,7 +541,7 @@ struct AirPollutants: Codable {
 
 // MARK: - EnvironmentInternationalAgreements
 struct EnvironmentInternationalAgreements: Codable {
-    let partyTo, signedButNotRatified: BroadcastMedia
+    var partyTo, signedButNotRatified: BroadcastMedia?
 
     enum CodingKeys: String, CodingKey {
         case partyTo = "party to"
@@ -551,8 +551,8 @@ struct EnvironmentInternationalAgreements: Codable {
 
 // MARK: - LandUse
 struct LandUse: Codable {
-    let agriculturalLand, agriculturalLandArableLand, agriculturalLandPermanentCrops, agriculturalLandPermanentPasture: BroadcastMedia
-    let forest, other: BroadcastMedia
+    var agriculturalLand, agriculturalLandArableLand, agriculturalLandPermanentCrops, agriculturalLandPermanentPasture: BroadcastMedia?
+    var forest, other: BroadcastMedia?
 
     enum CodingKeys: String, CodingKey {
         case agriculturalLand = "agricultural land"
@@ -565,7 +565,7 @@ struct LandUse: Codable {
 
 // MARK: - MajorLakesAreaSqKM
 struct MajorLakesAreaSqKM: Codable {
-    let freshWaterLakeS, saltWaterLakeS: BroadcastMedia
+    var freshWaterLakeS, saltWaterLakeS: BroadcastMedia?
 
     enum CodingKeys: String, CodingKey {
         case freshWaterLakeS = "fresh water lake(s)"
@@ -575,7 +575,7 @@ struct MajorLakesAreaSqKM: Codable {
 
 // MARK: - RevenueFromCoal
 struct RevenueFromCoal: Codable {
-    let coalRevenues: BroadcastMedia
+    var coalRevenues: BroadcastMedia?
 
     enum CodingKeys: String, CodingKey {
         case coalRevenues = "coal revenues"
@@ -584,7 +584,7 @@ struct RevenueFromCoal: Codable {
 
 // MARK: - RevenueFromForestResources
 struct RevenueFromForestResources: Codable {
-    let forestRevenues: BroadcastMedia
+    var forestRevenues: BroadcastMedia?
 
     enum CodingKeys: String, CodingKey {
         case forestRevenues = "forest revenues"
@@ -593,12 +593,12 @@ struct RevenueFromForestResources: Codable {
 
 // MARK: - TotalWaterWithdrawal
 struct TotalWaterWithdrawal: Codable {
-    let municipal, industrial, agricultural: BroadcastMedia
+    var municipal, industrial, agricultural: BroadcastMedia?
 }
 
 // MARK: - Urbanization
 struct Urbanization: Codable {
-    let urbanPopulation, rateOfUrbanization: BroadcastMedia
+    var urbanPopulation, rateOfUrbanization: BroadcastMedia?
 
     enum CodingKeys: String, CodingKey {
         case urbanPopulation = "urban population"
@@ -608,7 +608,7 @@ struct Urbanization: Codable {
 
 // MARK: - WasteAndRecycling
 struct WasteAndRecycling: Codable {
-    let municipalSolidWasteGeneratedAnnually, municipalSolidWasteRecycledAnnually, percentOfMunicipalSolidWasteRecycled: BroadcastMedia
+    var municipalSolidWasteGeneratedAnnually, municipalSolidWasteRecycledAnnually, percentOfMunicipalSolidWasteRecycled: BroadcastMedia?
 
     enum CodingKeys: String, CodingKey {
         case municipalSolidWasteGeneratedAnnually = "municipal solid waste generated annually"
@@ -619,20 +619,20 @@ struct WasteAndRecycling: Codable {
 
 // MARK: - Geography
 struct Geography: Codable {
-    let location, geographicCoordinates, mapReferences: BroadcastMedia
-    let area: Area
-    let areaComparative: BroadcastMedia
-    let landBoundaries: LandBoundaries
-    let coastline: BroadcastMedia
-    let maritimeClaims: MaritimeClaims
-    let climate, terrain: BroadcastMedia
-    let elevation: Elevation
-    let naturalResources: BroadcastMedia
-    let landUse: LandUse
-    let irrigatedLand: BroadcastMedia
-    let majorLakesAreaSqKM: MajorLakesAreaSqKM
-    let majorRiversByLengthInKM, majorWatershedsAreaSqKM, populationDistribution, naturalHazards: BroadcastMedia
-    let geographyNote: BroadcastMedia
+    var location, geographicCoordinates, mapReferences: BroadcastMedia?
+    var area: Area?
+    var areaComparative: BroadcastMedia?
+    var landBoundaries: LandBoundaries?
+    var coastline: BroadcastMedia?
+    var maritimeClaims: MaritimeClaims?
+    var climate, terrain: BroadcastMedia?
+    var elevation: Elevation?
+    var naturalResources: BroadcastMedia?
+    var landUse: LandUse?
+    var irrigatedLand: BroadcastMedia?
+    var majorLakesAreaSqKM: MajorLakesAreaSqKM?
+    var majorRiversByLengthInKM, majorWatershedsAreaSqKM, populationDistribution, naturalHazards: BroadcastMedia?
+    var geographyNote: BroadcastMedia?
 
     enum CodingKeys: String, CodingKey {
         case location = "Location"
@@ -660,12 +660,12 @@ struct Geography: Codable {
 
 // MARK: - Area
 struct Area: Codable {
-    let total, land, water: BroadcastMedia
+    var total, land, water: BroadcastMedia?
 }
 
 // MARK: - Elevation
 struct Elevation: Codable {
-    let highestPoint, lowestPoint, meanElevation: BroadcastMedia
+    var highestPoint, lowestPoint, meanElevation: BroadcastMedia?
 
     enum CodingKeys: String, CodingKey {
         case highestPoint = "highest point"
@@ -676,7 +676,7 @@ struct Elevation: Codable {
 
 // MARK: - LandBoundaries
 struct LandBoundaries: Codable {
-    let total, borderCountries: BroadcastMedia
+    var total, borderCountries: BroadcastMedia?
 
     enum CodingKeys: String, CodingKey {
         case total
@@ -686,7 +686,7 @@ struct LandBoundaries: Codable {
 
 // MARK: - MaritimeClaims
 struct MaritimeClaims: Codable {
-    let territorialSea, exclusiveEconomicZone, continentalShelf: BroadcastMedia
+    var territorialSea, exclusiveEconomicZone, continentalShelf: BroadcastMedia?
 
     enum CodingKeys: String, CodingKey {
         case territorialSea = "territorial sea"
@@ -697,23 +697,23 @@ struct MaritimeClaims: Codable {
 
 // MARK: - Government
 struct Government: Codable {
-    let countryName: CountryName
-    let governmentType: BroadcastMedia
-    let capital: Capital
-    let administrativeDivisions, independence, nationalHoliday: BroadcastMedia
-    let constitution: Constitution
-    let legalSystem, internationalLawOrganizationParticipation: BroadcastMedia
-    let citizenship: Citizenship
-    let suffrage: BroadcastMedia
-    let executiveBranch: ExecutiveBranch
-    let legislativeBranch: LegislativeBranch
-    let judicialBranch: JudicialBranch
-    let politicalPartiesAndLeaders, internationalOrganizationParticipation: BroadcastMedia
-    let diplomaticRepresentationInTheUS: DiplomaticRepresentationInTheUS
-    let diplomaticRepresentationFromTheUS: DiplomaticRepresentationFromTheUS
-    let flagDescription, nationalSymbolS: BroadcastMedia
-    let nationalAnthem: NationalAnthem
-    let nationalHeritage: NationalHeritage
+    var countryName: CountryName?
+    var governmentType: BroadcastMedia?
+    var capital: Capital?
+    var administrativeDivisions, independence, nationalHoliday: BroadcastMedia?
+    var constitution: Constitution?
+    var legalSystem, internationalLawOrganizationParticipation: BroadcastMedia?
+    var citizenship: Citizenship?
+    var suffrage: BroadcastMedia?
+    var executiveBranch: ExecutiveBranch?
+    var legislativeBranch: LegislativeBranch?
+    var judicialBranch: JudicialBranch?
+    var politicalPartiesAndLeaders, internationalOrganizationParticipation: BroadcastMedia?
+    var diplomaticRepresentationInTheUS: DiplomaticRepresentationInTheUS?
+    var diplomaticRepresentationFromTheUS: DiplomaticRepresentationFromTheUS?
+    var flagDescription, nationalSymbolS: BroadcastMedia?
+    var nationalAnthem: NationalAnthem?
+    var nationalHeritage: NationalHeritage?
 
     enum CodingKeys: String, CodingKey {
         case countryName = "Country name"
@@ -743,8 +743,8 @@ struct Government: Codable {
 
 // MARK: - Capital
 struct Capital: Codable {
-    let name, geographicCoordinates, timeDifference, daylightSavingTime: BroadcastMedia
-    let etymology: BroadcastMedia
+    var name, geographicCoordinates, timeDifference, daylightSavingTime: BroadcastMedia?
+    var etymology: BroadcastMedia?
 
     enum CodingKeys: String, CodingKey {
         case name
@@ -757,7 +757,7 @@ struct Capital: Codable {
 
 // MARK: - Citizenship
 struct Citizenship: Codable {
-    let citizenshipByBirth, citizenshipByDescentOnly, dualCitizenshipRecognized, residencyRequirementForNaturalization: BroadcastMedia
+    var citizenshipByBirth, citizenshipByDescentOnly, dualCitizenshipRecognized, residencyRequirementForNaturalization: BroadcastMedia?
 
     enum CodingKeys: String, CodingKey {
         case citizenshipByBirth = "citizenship by birth"
@@ -769,13 +769,13 @@ struct Citizenship: Codable {
 
 // MARK: - Constitution
 struct Constitution: Codable {
-    let history, amendments: BroadcastMedia
+    var history, amendments: BroadcastMedia?
 }
 
 // MARK: - CountryName
 struct CountryName: Codable {
-    let conventionalLongForm, conventionalShortForm, localLongForm, localShortForm: BroadcastMedia
-    let former, etymology: BroadcastMedia
+    var conventionalLongForm, conventionalShortForm, localLongForm, localShortForm: BroadcastMedia?
+    var former, etymology: BroadcastMedia?
 
     enum CodingKeys: String, CodingKey {
         case conventionalLongForm = "conventional long form"
@@ -788,8 +788,8 @@ struct CountryName: Codable {
 
 // MARK: - DiplomaticRepresentationFromTheUS
 struct DiplomaticRepresentationFromTheUS: Codable {
-    let chiefOfMission, embassy, mailingAddress, telephone: BroadcastMedia
-    let fax, emailAddressAndWebsite, consulateSGeneral: BroadcastMedia
+    var chiefOfMission, embassy, mailingAddress, telephone: BroadcastMedia?
+    var fax, emailAddressAndWebsite, consulateSGeneral: BroadcastMedia?
 
     enum CodingKeys: String, CodingKey {
         case chiefOfMission = "chief of mission"
@@ -804,8 +804,8 @@ struct DiplomaticRepresentationFromTheUS: Codable {
 
 // MARK: - DiplomaticRepresentationInTheUS
 struct DiplomaticRepresentationInTheUS: Codable {
-    let chiefOfMission, chancery, telephone, fax: BroadcastMedia
-    let emailAddressAndWebsite, consulateSGeneral: BroadcastMedia
+    var chiefOfMission, chancery, telephone, fax: BroadcastMedia?
+    var emailAddressAndWebsite, consulateSGeneral: BroadcastMedia?
 
     enum CodingKeys: String, CodingKey {
         case chiefOfMission = "chief of mission"
@@ -818,8 +818,8 @@ struct DiplomaticRepresentationInTheUS: Codable {
 
 // MARK: - ExecutiveBranch
 struct ExecutiveBranch: Codable {
-    let chiefOfState, headOfGovernment, cabinet, electionsAppointments: BroadcastMedia
-    let electionResults: BroadcastMedia
+    var chiefOfState, headOfGovernment, cabinet, electionsAppointments: BroadcastMedia?
+    var electionResults: BroadcastMedia?
 
     enum CodingKeys: String, CodingKey {
         case chiefOfState = "chief of state"
@@ -832,7 +832,7 @@ struct ExecutiveBranch: Codable {
 
 // MARK: - JudicialBranch
 struct JudicialBranch: Codable {
-    let highestCourtS, judgeSelectionAndTermOfOffice, subordinateCourts: BroadcastMedia
+    var highestCourtS, judgeSelectionAndTermOfOffice, subordinateCourts: BroadcastMedia?
 
     enum CodingKeys: String, CodingKey {
         case highestCourtS = "highest court(s)"
@@ -843,8 +843,8 @@ struct JudicialBranch: Codable {
 
 // MARK: - LegislativeBranch
 struct LegislativeBranch: Codable {
-    let description, elections, electionResults: BroadcastMedia
-    let note: String
+    var description, elections, electionResults: BroadcastMedia?
+    var note: String?
 
     enum CodingKeys: String, CodingKey {
         case description, elections
@@ -855,8 +855,8 @@ struct LegislativeBranch: Codable {
 
 // MARK: - NationalAnthem
 struct NationalAnthem: Codable {
-    let name, lyricsMusic: BroadcastMedia
-    let note: String
+    var name, lyricsMusic: BroadcastMedia?
+    var note: String?
 
     enum CodingKeys: String, CodingKey {
         case name
@@ -867,7 +867,7 @@ struct NationalAnthem: Codable {
 
 // MARK: - NationalHeritage
 struct NationalHeritage: Codable {
-    let totalWorldHeritageSites, selectedWorldHeritageSiteLocales: BroadcastMedia
+    var totalWorldHeritageSites, selectedWorldHeritageSiteLocales: BroadcastMedia?
 
     enum CodingKeys: String, CodingKey {
         case totalWorldHeritageSites = "total World Heritage Sites"
@@ -877,7 +877,7 @@ struct NationalHeritage: Codable {
 
 // MARK: - Introduction
 struct Introduction: Codable {
-    let background: BroadcastMedia
+    var background: BroadcastMedia?
 
     enum CodingKeys: String, CodingKey {
         case background = "Background"
@@ -886,12 +886,12 @@ struct Introduction: Codable {
 
 // MARK: - MilitaryAndSecurity
 struct MilitaryAndSecurity: Codable {
-    let militaryAndSecurityForces: BroadcastMedia
-    let militaryExpenditures: MilitaryExpenditures
-    let militaryAndSecurityServicePersonnelStrengths: MilitaryAndSecurityServicePersonnelStrengths
-    let militaryEquipmentInventoriesAndAcquisitions: BroadcastMedia
-    let militaryServiceAgeAndObligation, militaryDeployments: MilitaryAndSecurityServicePersonnelStrengths
-    let militaryNote: BroadcastMedia
+    var militaryAndSecurityForces: BroadcastMedia?
+    var militaryExpenditures: MilitaryExpenditures?
+    var militaryAndSecurityServicePersonnelStrengths: MilitaryAndSecurityServicePersonnelStrengths?
+    var militaryEquipmentInventoriesAndAcquisitions: BroadcastMedia?
+    var militaryServiceAgeAndObligation, militaryDeployments: MilitaryAndSecurityServicePersonnelStrengths?
+    var militaryNote: BroadcastMedia?
 
     enum CodingKeys: String, CodingKey {
         case militaryAndSecurityForces = "Military and security forces"
@@ -906,14 +906,14 @@ struct MilitaryAndSecurity: Codable {
 
 // MARK: - MilitaryAndSecurityServicePersonnelStrengths
 struct MilitaryAndSecurityServicePersonnelStrengths: Codable {
-    let text, note: String
+    var text, note: String?
 }
 
 // MARK: - MilitaryExpenditures
 struct MilitaryExpenditures: Codable {
-    let militaryExpenditures2022, militaryExpenditures2021, militaryExpenditures2020, militaryExpenditures2019: BroadcastMedia
-    let militaryExpenditures2018: BroadcastMedia
-    let note: String
+    var militaryExpenditures2022, militaryExpenditures2021, militaryExpenditures2020, militaryExpenditures2019: BroadcastMedia?
+    var militaryExpenditures2018: BroadcastMedia?
+    var note: String?
 
     enum CodingKeys: String, CodingKey {
         case militaryExpenditures2022 = "Military Expenditures 2022"
@@ -927,33 +927,33 @@ struct MilitaryExpenditures: Codable {
 
 // MARK: - PeopleAndSociety
 struct PeopleAndSociety: Codable {
-    let population: BroadcastMedia
-    let nationality: Nationality
-    let ethnicGroups: MilitaryAndSecurityServicePersonnelStrengths
-    let languages: Languages
-    let religions: BroadcastMedia
-    let ageStructure: AgeStructure
-    let dependencyRatios: DependencyRatios
-    let medianAge: YouthUnemploymentRateAges1524
-    let populationGrowthRate, birthRate, deathRate, netMigrationRate: BroadcastMedia
-    let populationDistribution: BroadcastMedia
-    let urbanization: Urbanization
-    let majorUrbanAreasPopulation: BroadcastMedia
-    let sexRatio: [String: BroadcastMedia]
-    let motherSMeanAgeAtFirstBirth, maternalMortalityRatio: BroadcastMedia
-    let infantMortalityRate: YouthUnemploymentRateAges1524
-    let lifeExpectancyAtBirth: LifeExpectancyAtBirth
-    let totalFertilityRate, grossReproductionRate: BroadcastMedia
-    let contraceptivePrevalenceRate: MilitaryAndSecurityServicePersonnelStrengths
-    let drinkingWaterSource: DrinkingWaterSource
-    let currentHealthExpenditure, physiciansDensity, hospitalBedDensity: BroadcastMedia
-    let sanitationFacilityAccess: DrinkingWaterSource
-    let hivAIDSAdultPrevalenceRate, obesityAdultPrevalenceRate: BroadcastMedia
-    let alcoholConsumptionPerCapita: AlcoholConsumptionPerCapita
-    let tobaccoUse: YouthUnemploymentRateAges1524
-    let childrenUnderTheAgeOf5YearsUnderweight, currentlyMarriedWomenAges1549, educationExpenditures: BroadcastMedia
-    let literacy: LifeExpectancyAtBirth
-    let schoolLifeExpectancyPrimaryToTertiaryEducation, youthUnemploymentRateAges1524: YouthUnemploymentRateAges1524
+    var population: BroadcastMedia?
+    var nationality: Nationality?
+    var ethnicGroups: MilitaryAndSecurityServicePersonnelStrengths?
+    var languages: Languages?
+    var religions: BroadcastMedia?
+    var ageStructure: AgeStructure?
+    var dependencyRatios: DependencyRatios?
+    var medianAge: YouthUnemploymentRateAges1524?
+    var populationGrowthRate, birthRate, deathRate, netMigrationRate: BroadcastMedia?
+    var populationDistribution: BroadcastMedia?
+    var urbanization: Urbanization?
+    var majorUrbanAreasPopulation: BroadcastMedia?
+    var sexRatio: [String: BroadcastMedia]?
+    var motherSMeanAgeAtFirstBirth, maternalMortalityRatio: BroadcastMedia?
+    var infantMortalityRate: YouthUnemploymentRateAges1524?
+    var lifeExpectancyAtBirth: LifeExpectancyAtBirth?
+    var totalFertilityRate, grossReproductionRate: BroadcastMedia?
+    var contraceptivePrevalenceRate: MilitaryAndSecurityServicePersonnelStrengths?
+    var drinkingWaterSource: DrinkingWaterSource?
+    var currentHealthExpenditure, physiciansDensity, hospitalBedDensity: BroadcastMedia?
+    var sanitationFacilityAccess: DrinkingWaterSource?
+    var hivAIDSAdultPrevalenceRate, obesityAdultPrevalenceRate: BroadcastMedia?
+    var alcoholConsumptionPerCapita: AlcoholConsumptionPerCapita?
+    var tobaccoUse: YouthUnemploymentRateAges1524?
+    var childrenUnderTheAgeOf5YearsUnderweight, currentlyMarriedWomenAges1549, educationExpenditures: BroadcastMedia?
+    var literacy: LifeExpectancyAtBirth?
+    var schoolLifeExpectancyPrimaryToTertiaryEducation, youthUnemploymentRateAges1524: YouthUnemploymentRateAges1524?
 
     enum CodingKeys: String, CodingKey {
         case population = "Population"
@@ -999,8 +999,8 @@ struct PeopleAndSociety: Codable {
 
 // MARK: - AgeStructure
 struct AgeStructure: Codable {
-    let the014Years, the1524Years, the2554Years, the5564Years: BroadcastMedia
-    let the65YearsAndOver: BroadcastMedia
+    var the014Years, the1524Years, the2554Years, the5564Years: BroadcastMedia?
+    var the65YearsAndOver: BroadcastMedia?
 
     enum CodingKeys: String, CodingKey {
         case the014Years = "0-14 years"
@@ -1013,8 +1013,8 @@ struct AgeStructure: Codable {
 
 // MARK: - AlcoholConsumptionPerCapita
 struct AlcoholConsumptionPerCapita: Codable {
-    let total, beer, wine, spirits: BroadcastMedia
-    let otherAlcohols: BroadcastMedia
+    var total, beer, wine, spirits: BroadcastMedia?
+    var otherAlcohols: BroadcastMedia?
 
     enum CodingKeys: String, CodingKey {
         case total, beer, wine, spirits
@@ -1024,7 +1024,7 @@ struct AlcoholConsumptionPerCapita: Codable {
 
 // MARK: - DependencyRatios
 struct DependencyRatios: Codable {
-    let totalDependencyRatio, youthDependencyRatio, elderlyDependencyRatio, potentialSupportRatio: BroadcastMedia
+    var totalDependencyRatio, youthDependencyRatio, elderlyDependencyRatio, potentialSupportRatio: BroadcastMedia?
 
     enum CodingKeys: String, CodingKey {
         case totalDependencyRatio = "total dependency ratio"
@@ -1036,8 +1036,8 @@ struct DependencyRatios: Codable {
 
 // MARK: - DrinkingWaterSource
 struct DrinkingWaterSource: Codable {
-    let improvedUrban, improvedRural, improvedTotal, unimprovedUrban: BroadcastMedia
-    let unimprovedRural, unimprovedTotal: BroadcastMedia
+    var improvedUrban, improvedRural, improvedTotal, unimprovedUrban: BroadcastMedia?
+    var unimprovedRural, unimprovedTotal: BroadcastMedia?
 
     enum CodingKeys: String, CodingKey {
         case improvedUrban = "improved: urban"
@@ -1051,7 +1051,7 @@ struct DrinkingWaterSource: Codable {
 
 // MARK: - Languages
 struct Languages: Codable {
-    let languages, majorLanguageSampleS: BroadcastMedia
+    var languages, majorLanguageSampleS: BroadcastMedia?
 
     enum CodingKeys: String, CodingKey {
         case languages = "Languages"
@@ -1061,7 +1061,7 @@ struct Languages: Codable {
 
 // MARK: - LifeExpectancyAtBirth
 struct LifeExpectancyAtBirth: Codable {
-    let totalPopulation, male, female: BroadcastMedia
+    var totalPopulation, male, female: BroadcastMedia?
 
     enum CodingKeys: String, CodingKey {
         case totalPopulation = "total population"
@@ -1071,12 +1071,12 @@ struct LifeExpectancyAtBirth: Codable {
 
 // MARK: - Nationality
 struct Nationality: Codable {
-    let noun, adjective: BroadcastMedia
+    var noun, adjective: BroadcastMedia?
 }
 
 // MARK: - Terrorism
 struct Terrorism: Codable {
-    let terroristGroupS: MilitaryAndSecurityServicePersonnelStrengths
+    var terroristGroupS: MilitaryAndSecurityServicePersonnelStrengths?
 
     enum CodingKeys: String, CodingKey {
         case terroristGroupS = "Terrorist group(s)"
@@ -1085,9 +1085,9 @@ struct Terrorism: Codable {
 
 // MARK: - TransnationalIssues
 struct TransnationalIssues: Codable {
-    let disputesInternational: BroadcastMedia
-    let refugeesAndInternallyDisplacedPersons: RefugeesAndInternallyDisplacedPersons
-    let illicitDrugs: BroadcastMedia
+    var disputesInternational: BroadcastMedia?
+    var refugeesAndInternallyDisplacedPersons: RefugeesAndInternallyDisplacedPersons?
+    var illicitDrugs: BroadcastMedia?
 
     enum CodingKeys: String, CodingKey {
         case disputesInternational = "Disputes - international"
@@ -1098,7 +1098,7 @@ struct TransnationalIssues: Codable {
 
 // MARK: - RefugeesAndInternallyDisplacedPersons
 struct RefugeesAndInternallyDisplacedPersons: Codable {
-    let refugeesCountryOfOrigin, statelessPersons: BroadcastMedia
+    var refugeesCountryOfOrigin, statelessPersons: BroadcastMedia?
 
     enum CodingKeys: String, CodingKey {
         case refugeesCountryOfOrigin = "refugees (country of origin)"
@@ -1108,17 +1108,17 @@ struct RefugeesAndInternallyDisplacedPersons: Codable {
 
 // MARK: - Transportation
 struct Transportation: Codable {
-    let nationalAirTransportSystem: NationalAirTransportSystem
-    let civilAircraftRegistrationCountryCodePrefix: BroadcastMedia
-    let airports: Airports
-    let airportsWithPavedRunways, airportsWithUnpavedRunways: [String: BroadcastMedia]
-    let heliports, pipelines: BroadcastMedia
-    let railways: Railways
-    let roadways: Roadways
-    let waterways: BroadcastMedia
-    let merchantMarine: MerchantMarine
-    let portsAndTerminals: PortsAndTerminals
-    let transportationNote: BroadcastMedia
+    var nationalAirTransportSystem: NationalAirTransportSystem?
+    var civilAircraftRegistrationCountryCodePrefix: BroadcastMedia?
+    var airports: Airports?
+    var airportsWithPavedRunways, airportsWithUnpavedRunways: [String: BroadcastMedia]?
+    var heliports, pipelines: BroadcastMedia?
+    var railways: Railways?
+    var roadways: Roadways?
+    var waterways: BroadcastMedia?
+    var merchantMarine: MerchantMarine?
+    var portsAndTerminals: PortsAndTerminals?
+    var transportationNote: BroadcastMedia?
 
     enum CodingKeys: String, CodingKey {
         case nationalAirTransportSystem = "National air transport system"
@@ -1139,12 +1139,12 @@ struct Transportation: Codable {
 
 // MARK: - Airports
 struct Airports: Codable {
-    let total: BroadcastMedia
+    var total: BroadcastMedia?
 }
 
 // MARK: - MerchantMarine
 struct MerchantMarine: Codable {
-    let total, byType: BroadcastMedia
+    var total, byType: BroadcastMedia?
 
     enum CodingKeys: String, CodingKey {
         case total
@@ -1154,7 +1154,7 @@ struct MerchantMarine: Codable {
 
 // MARK: - NationalAirTransportSystem
 struct NationalAirTransportSystem: Codable {
-    let numberOfRegisteredAirCarriers, inventoryOfRegisteredAircraftOperatedByAirCarriers, annualPassengerTrafficOnRegisteredAirCarriers, annualFreightTrafficOnRegisteredAirCarriers: BroadcastMedia
+    var numberOfRegisteredAirCarriers, inventoryOfRegisteredAircraftOperatedByAirCarriers, annualPassengerTrafficOnRegisteredAirCarriers, annualFreightTrafficOnRegisteredAirCarriers: BroadcastMedia?
 
     enum CodingKeys: String, CodingKey {
         case numberOfRegisteredAirCarriers = "number of registered air carriers"
@@ -1166,8 +1166,8 @@ struct NationalAirTransportSystem: Codable {
 
 // MARK: - PortsAndTerminals
 struct PortsAndTerminals: Codable {
-    let majorSeaportS, oilTerminalS, containerPortSTEUs, lngTerminalSImport: BroadcastMedia
-    let riverPortS: BroadcastMedia
+    var majorSeaportS, oilTerminalS, containerPortSTEUs, lngTerminalSImport: BroadcastMedia?
+    var riverPortS: BroadcastMedia?
 
     enum CodingKeys: String, CodingKey {
         case majorSeaportS = "major seaport(s)"
@@ -1180,12 +1180,12 @@ struct PortsAndTerminals: Codable {
 
 // MARK: - Railways
 struct Railways: Codable {
-    let total: BroadcastMedia
-    let note: String
+    var total: BroadcastMedia?
+    var note: String?
 }
 
 // MARK: - Roadways
 struct Roadways: Codable {
-    let total, paved: BroadcastMedia
-    let note: String
+    var total, paved: BroadcastMedia?
+    var note: String?
 }

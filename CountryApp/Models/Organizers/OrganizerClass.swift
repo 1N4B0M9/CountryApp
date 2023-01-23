@@ -21,9 +21,9 @@ import Foundation
  */
 struct WelcomeElement: Codable {
     
-    let code, name: String?
-    let category: Category?
-    let region: Region?
+    var code, name: String
+    var category: Category
+    var region: String
 
     enum CodingKeys: String, CodingKey {
         case code = "Code"
@@ -49,7 +49,7 @@ enum Category: String, Codable {
     case other = "Other"
     case world = "World"
 }
-
+/*
 enum Region: String, Codable {
     case africa = "Africa"
     case antarctica = "Antarctica"
@@ -65,4 +65,5 @@ enum Region: String, Codable {
     case southAsia = "South Asia"
     case world = "World"
 }
+ */
 
