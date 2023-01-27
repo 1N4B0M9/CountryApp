@@ -12,6 +12,8 @@ class FetchData : ObservableObject {
  //   @Published var response : Welcome = Welcome(introduction: nil, geography: nil, peopleAndSociety: nil, environment: nil, government: nil, economy: nil, energy: nil, communications: nil, transportation: nil, militaryAndSecurity: nil, terrorism: nil, transnationalIssues: nil)
     @Published var response : Welcome = Welcome(introduction: nil, geography: nil, peopleAndSociety: nil, environment: nil, government: nil, economy: nil, energy: nil, communications: nil, transportation: nil, militaryAndSecurity: nil, terrorism: nil, transnationalIssues: nil)
     @Published var responseSearch : Welcome = Welcome(introduction: nil, geography: nil, peopleAndSociety: nil, environment: nil, government: nil, economy: nil, energy: nil, communications: nil, transportation: nil, militaryAndSecurity: nil, terrorism: nil, transnationalIssues: nil)
+    
+    @Published var finished = false
   //homepage
     func getLocalData() async {
         
@@ -25,7 +27,6 @@ class FetchData : ObservableObject {
             let r = try JSONDecoder().decode(Welcome.self, from: data)
             print(r.geography?.coastline?.text ?? "urmom")
             self.response = r
-            
                
         } catch {
             print(error)
@@ -47,7 +48,8 @@ class FetchData : ObservableObject {
             let r = try JSONDecoder().decode(Welcome.self, from: data)
             print(r.geography?.coastline?.text ?? "urmom")
             self.responseSearch = r
-            
+            self.finished = true
+
                
         } catch {
             print(error)

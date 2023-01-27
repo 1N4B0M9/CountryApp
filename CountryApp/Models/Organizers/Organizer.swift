@@ -17,7 +17,7 @@ class FetchOrganizer : ObservableObject {
         let urlString = "https://github.com/factbook/factbook.json/raw/master/europe/gm.json"
         guard let url = URL(string: urlString) else {return}
         */
-        guard let path = Bundle.main.path(forResource: "csvjson", ofType: "json") else {return}
+        guard let path = Bundle.main.path(forResource: "csvjson1", ofType: "json") else {return}
         do {
             let (data, _) = try await URLSession.shared.data(from: URL(fileURLWithPath: path))
             let dataString = String(data: data, encoding: .utf8)

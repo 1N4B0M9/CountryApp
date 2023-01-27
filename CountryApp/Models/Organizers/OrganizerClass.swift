@@ -21,13 +21,14 @@ import Foundation
  */
 struct WelcomeElement: Codable {
     
-    var code, name: String
-    var category: Category
-    var region: String
+    var code, name, isoAlpha2: String?
+    var category: Category?
+    var region: String?
 
     enum CodingKeys: String, CodingKey {
         case code = "Code"
         case name = "Name"
+        case isoAlpha2 = "ISO_ALPHA_2"
         case category = "Category"
         case region = "Region"
     }

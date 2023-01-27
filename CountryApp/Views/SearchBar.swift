@@ -14,28 +14,45 @@ struct SearchBar: View {
     @StateObject var fetching = FetchOrganizer()
     @State var countryNames : [String] = []
     @StateObject var fetch = FetchData()
-
+    
     func getArr() async {
         countryNames.removeAll()
         for i in fetching.response {
-            countryNames.append(i.name)
+            countryNames.append(i.name ?? " ")
         }
         print(countryNames[0])
     }
     
 
     var body: some View {
+        ZStack {
+            Color.DarkBlue
+                .ignoresSafeArea()
         NavigationView {
+            
             List {
                 ForEach(searchResults, id: \.self) { name in
                     NavigationLink {
                         CountryView(naming: name, countryNames: $countryNames)
+                        //LoadingScreen(countryNames: $countryNames, s: name)
                     } label: {
+                        ZStack{
+                            Rectangle()
+                                .ignoresSafeArea()
+                                .cornerRadius(20)
+                                .foregroundColor(.DarkBlue)
                         Text(name)
+                            
+                            .foregroundColor(.white)
+                            .font(Constants.textFont)
+                        }
                     }
+                
+                    
 
             }
-         
+            }
+
         }
         .searchable(text: $searchText, placement: .navigationBarDrawer(displayMode: .always))
         .task {

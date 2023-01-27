@@ -9,30 +9,50 @@ import SwiftUI
 
 struct ContentView: View {
     @StateObject var fetch = FetchData()
-
+    @State var page : Bool = false
     var body: some View {
-       
-    
-        VStack {
-            VStack{
-               // Text("HI")
-                //r.countries[0].geography?.coastline.text
-                //fetch.response.geography?.coastline.text
-                //Text(fetch.response.introduction?.background?.text ?? "No work")
-                
-            }
-            .task {
-                await fetch.getLocalData()
-                
-        }
-            
-                SearchBar()
+       /* if page == false {
+            Button{
+              page = true
+            } label : {
+                Image("search")
+                    .resizable()
+                    .frame(width: 20, height: 20)
 
+            }
             
+                .offset(x: UIScreen.main.bounds.size.width-520, y: UIScreen.main.bounds.size.height-1175)
+                .task {
+                    await fetch.getLocalData()
+                    
+            }
+        }
+        else {
+            Button{
+              page = false
+            } label : {
+                Text("Back")
+            }
+           // .offset(x: UIScreen.main.bounds.size.width-520, y: UIScreen.main.bounds.size.height-1175)
+            */
+        VStack{
             
+            SearchBar()
+            
+        }
+        .task {
+            await fetch.getLocalData()
+                
         }
         
-     
+        
+            
+            
+
+            
+            
+        
+        
         
             
          

@@ -8,8 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		CB4DACF72965BB0300CCC151 /* SearchBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB4DACF62965BB0300CCC151 /* SearchBar.swift */; };
-		CB4DACFB2965CA5B00CCC151 /* SlideOverCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB4DACFA2965CA5B00CCC151 /* SlideOverCard.swift */; };
-		CB4DACFD2965CAC100CCC151 /* Handle.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB4DACFC2965CAC100CCC151 /* Handle.swift */; };
+		CB6F7688298160B700BEEE2C /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB6F7687298160B700BEEE2C /* Constants.swift */; };
+		CB6F768C29841CA700BEEE2C /* csvjson1.json in Resources */ = {isa = PBXBuildFile; fileRef = CB6F768B29841CA700BEEE2C /* csvjson1.json */; };
 		CBAB336A2978E1150077305C /* csvjson.json in Resources */ = {isa = PBXBuildFile; fileRef = CBAB33692978E1150077305C /* csvjson.json */; };
 		CBAB336C2978E13E0077305C /* Organizer.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBAB336B2978E13E0077305C /* Organizer.swift */; };
 		CBAB336F2978E1AA0077305C /* OrganizerClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBAB336E2978E1AA0077305C /* OrganizerClass.swift */; };
@@ -20,12 +20,13 @@
 		CBB10909295CAEB6003ED5C5 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CBB10908295CAEB6003ED5C5 /* Preview Assets.xcassets */; };
 		CBB10913295CB07B003ED5C5 /* Fetch.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBB10912295CB07B003ED5C5 /* Fetch.swift */; };
 		CBB10915295CB1BF003ED5C5 /* Country.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBB10914295CB1BF003ED5C5 /* Country.swift */; };
+		CBD21A5029845615002EF770 /* TravelAdvisoryAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBD21A4F29845615002EF770 /* TravelAdvisoryAPI.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		CB4DACF62965BB0300CCC151 /* SearchBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchBar.swift; sourceTree = "<group>"; };
-		CB4DACFA2965CA5B00CCC151 /* SlideOverCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SlideOverCard.swift; sourceTree = "<group>"; };
-		CB4DACFC2965CAC100CCC151 /* Handle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Handle.swift; sourceTree = "<group>"; };
+		CB6F7687298160B700BEEE2C /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		CB6F768B29841CA700BEEE2C /* csvjson1.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = csvjson1.json; sourceTree = "<group>"; };
 		CBAB33692978E1150077305C /* csvjson.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = csvjson.json; sourceTree = "<group>"; };
 		CBAB336B2978E13E0077305C /* Organizer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Organizer.swift; sourceTree = "<group>"; };
 		CBAB336E2978E1AA0077305C /* OrganizerClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrganizerClass.swift; sourceTree = "<group>"; };
@@ -37,6 +38,7 @@
 		CBB10908295CAEB6003ED5C5 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		CBB10912295CB07B003ED5C5 /* Fetch.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Fetch.swift; sourceTree = "<group>"; };
 		CBB10914295CB1BF003ED5C5 /* Country.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Country.swift; sourceTree = "<group>"; };
+		CBD21A4F29845615002EF770 /* TravelAdvisoryAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TravelAdvisoryAPI.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -50,13 +52,6 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		CBAB33682978E0EF0077305C /* JsonFile */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = JsonFile;
-			sourceTree = "<group>";
-		};
 		CBAB336D2978E1530077305C /* Organizers */ = {
 			isa = PBXGroup;
 			children = (
@@ -85,12 +80,12 @@
 		CBB10900295CAEB3003ED5C5 /* CountryApp */ = {
 			isa = PBXGroup;
 			children = (
-				CBAB33682978E0EF0077305C /* JsonFile */,
 				CBB10911295CAFE4003ED5C5 /* Views */,
 				CBB1090F295CAFC3003ED5C5 /* Models */,
 				CBB10905295CAEB6003ED5C5 /* Assets.xcassets */,
 				CBB10901295CAEB3003ED5C5 /* CountryAppApp.swift */,
 				CBAB33692978E1150077305C /* csvjson.json */,
+				CB6F768B29841CA700BEEE2C /* csvjson1.json */,
 				CBB10907295CAEB6003ED5C5 /* Preview Content */,
 			);
 			path = CountryApp;
@@ -107,6 +102,8 @@
 		CBB1090F295CAFC3003ED5C5 /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				CBD21A4E2984549F002EF770 /* TravelAdvisory */,
+				CB6F7687298160B700BEEE2C /* Constants.swift */,
 				CBAB336D2978E1530077305C /* Organizers */,
 				CBB10912295CB07B003ED5C5 /* Fetch.swift */,
 				CBB10914295CB1BF003ED5C5 /* Country.swift */,
@@ -119,11 +116,17 @@
 			children = (
 				CBB10903295CAEB3003ED5C5 /* ContentView.swift */,
 				CB4DACF62965BB0300CCC151 /* SearchBar.swift */,
-				CB4DACFA2965CA5B00CCC151 /* SlideOverCard.swift */,
-				CB4DACFC2965CAC100CCC151 /* Handle.swift */,
 				CBAB3370297B04950077305C /* CountryView.swift */,
 			);
 			path = Views;
+			sourceTree = "<group>";
+		};
+		CBD21A4E2984549F002EF770 /* TravelAdvisory */ = {
+			isa = PBXGroup;
+			children = (
+				CBD21A4F29845615002EF770 /* TravelAdvisoryAPI.swift */,
+			);
+			path = TravelAdvisory;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -184,6 +187,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CB6F768C29841CA700BEEE2C /* csvjson1.json in Resources */,
 				CBB10909295CAEB6003ED5C5 /* Preview Assets.xcassets in Resources */,
 				CBB10906295CAEB6003ED5C5 /* Assets.xcassets in Resources */,
 				CBAB336A2978E1150077305C /* csvjson.json in Resources */,
@@ -198,15 +202,15 @@
 			buildActionMask = 2147483647;
 			files = (
 				CBB10915295CB1BF003ED5C5 /* Country.swift in Sources */,
+				CB6F7688298160B700BEEE2C /* Constants.swift in Sources */,
 				CBB10913295CB07B003ED5C5 /* Fetch.swift in Sources */,
 				CB4DACF72965BB0300CCC151 /* SearchBar.swift in Sources */,
 				CBAB336C2978E13E0077305C /* Organizer.swift in Sources */,
-				CB4DACFD2965CAC100CCC151 /* Handle.swift in Sources */,
+				CBD21A5029845615002EF770 /* TravelAdvisoryAPI.swift in Sources */,
 				CBAB3371297B04950077305C /* CountryView.swift in Sources */,
 				CBB10904295CAEB3003ED5C5 /* ContentView.swift in Sources */,
 				CBAB336F2978E1AA0077305C /* OrganizerClass.swift in Sources */,
 				CBB10902295CAEB3003ED5C5 /* CountryAppApp.swift in Sources */,
-				CB4DACFB2965CA5B00CCC151 /* SlideOverCard.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
